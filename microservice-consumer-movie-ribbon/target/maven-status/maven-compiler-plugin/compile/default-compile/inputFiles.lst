@@ -1,0 +1,5 @@
+/Users/wangyong/mygit/microservice-segema/microservice-consumer-movie-ribbon/src/main/java/com/itmuch/cloud/study/MovieRibbonApplication.java
+/Users/wangyong/mygit/microservice-segema/microservice-consumer-movie-ribbon/src/main/java/com/itmuch/cloud/study/user/entity/Contract.java
+/Users/wangyong/mygit/microservice-segema/microservice-consumer-movie-ribbon/src/main/java/com/itmuch/cloud/study/user/entity/User.java
+/Users/wangyong/mygit/microservice-segema/microservice-consumer-movie-ribbon/src/main/java/com/itmuch/cloud/study/user/service/RibbonService.java
+/Users/wangyong/mygit/microservice-segema/microservice-consumer-movie-ribbon/src/main/java/com/itmuch/cloud/study/user/controller/RibbonController.java

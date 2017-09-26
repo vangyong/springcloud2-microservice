@@ -1,0 +1,50 @@
+server:
+  port: 12012
+  tomcat:
+    uri-encoding: UTF-8
+spring:
+  application:
+    name: microservice-filecenter    # 项目名称尽量用小写
+  http:
+    encoding:
+      charset: UTF-8
+      force: true
+    multipart: 
+      max-file-size: 20MB
+      max-request-size: 20MB
+      location: /Users/wangyong/test/testfiles
+  jpa: 
+    database: MYSQL
+    generate-ddl: true
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+      #naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy
+    properties: 
+      hibernate: 
+        dialect : org.hibernate.dialect.MySQL5Dialect  
+  datasource:                           # 指定数据源
+     url: jdbc:mysql://127.0.0.1:3306/microservice_filecenter
+     driverClassName: com.mysql.jdbc.Driver
+     username: root
+     password: root
+  thymeleaf: 
+     cache: false
+     prefix: classpath:/templates/
+     suffix: .html
+     mode: HTML5
+     encoding: UTF-8
+     content-type: text/html
+logging: 
+  level:
+    root: INFO
+    org.hibernate: INFO
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+    org.hibernate.type.descriptor.sql.BasicExtractor: TRACE
+    com.itmuch.youran.persistence: ERROR
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://discovery:8761/eureka/    # 指定注册中心的地址
+  instance:
+    preferIpAddress: true

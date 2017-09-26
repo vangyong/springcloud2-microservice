@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <!-- 引入样式 -->
+  <!-- <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-default/index.css"> -->
+</head>
+<body>
+
+</body>
+
+<button id="test1">小小提示层</button>
+
+<button id="parentIframe">弹出iframe层</button>
+
+<button id="test4">弹出loading层</button>
+
+  <!-- 先引入 jquery -->
+  <script type="text/javascript" src="/plugins/jquery-1.11.0/jquery-1.11.0.min.js"></script>
+  <!-- 引入layer组件库 -->
+  <script  type="text/javascript" src="/plugins/layer-3.0.3/layer.js"></script>
+ <h2> this is my page</h2>
+ 
+ 
+ <script>
+
+$('#test1').on('click', function(){
+	layer.open({
+		  type: 1,
+		  area: ['600px', '360px'],
+		  shadeClose: true, //点击遮罩关闭
+		  content: '\<\div style="padding:20px;">自定义内容\<\/div>'
+		  });
+});
+
+$('#parentIframe').on('click', function(){
+	layer.open({
+		  type: 2,
+		  title: 'iframe父子操作',
+		  maxmin: true,
+		  shadeClose: true, //点击遮罩关闭层
+		  area : ['800px' , '520px'],
+		  content: 'test-layer-01.html'
+		  });
+});
+
+$('#test4').on('click', function(){
+	  var ii = layer.load();
+	  //此处用setTimeout演示ajax的回调
+	  setTimeout(function(){
+	  		layer.close(ii);
+	  }, 1000);
+	});
+
+</script>
+</html>

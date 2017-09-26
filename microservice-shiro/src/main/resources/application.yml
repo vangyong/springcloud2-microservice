@@ -1,0 +1,50 @@
+server:
+  port: 12011
+spring:
+  application:
+    name: microservice-shiro    # 项目名称尽量用小写
+  jpa:
+    database: MYSQL
+    generate-ddl: false
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties: 
+      hibernate: 
+        dialect : org.hibernate.dialect.MySQL5Dialect
+  datasource:                           # 指定数据源
+    url: jdbc:mysql://127.0.0.1:3306/microservice_system
+    driverClassName: com.mysql.jdbc.Driver
+    username: root  
+    password: root
+  redis: 
+    database: 0
+    host: 127.0.0.1
+    port: 6379
+    password: 123456
+    pool: 
+      max-active: 8
+      max-wait: -1
+      max-idle: 8
+      min-idle: 0
+    timeout: 0
+  thymeleaf: 
+        cache: false
+        prefix: classpath:/templates/
+        suffix: .html
+        mode: HTML5
+        encoding: UTF-8
+        content-type: text/html    
+logging: 
+  level:
+    root: INFO
+    org.hibernate: INFO
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+    org.hibernate.type.descriptor.sql.BasicExtractor: TRACE
+    com.itmuch.youran.persistence: ERROR
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://discovery:8761/eureka/    # 指定注册中心的地址
+  instance:
+    preferIpAddress: true

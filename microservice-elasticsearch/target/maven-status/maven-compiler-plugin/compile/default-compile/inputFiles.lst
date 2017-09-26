@@ -1,0 +1,13 @@
+/Users/wangyong/mygit/microservice-segema/microservice-elasticsearch/src/main/java/cn/segema/cloud/elasticsearch/ElasticsearchApplication.java
+/Users/wangyong/mygit/microservice-segema/microservice-elasticsearch/src/main/java/cn/segema/cloud/elasticsearch/domain/Role.java
+/Users/wangyong/mygit/microservice-segema/microservice-elasticsearch/src/main/java/cn/segema/cloud/elasticsearch/vo/UserPersonalVO.java
+/Users/wangyong/mygit/microservice-segema/microservice-elasticsearch/src/main/java/cn/segema/cloud/elasticsearch/domain/Account.java
+/Users/wangyong/mygit/microservice-segema/microservice-elasticsearch/src/main/java/cn/segema/cloud/elasticsearch/domain/UserPersonal.java
+/Users/wangyong/mygit/microservice-segema/microservice-elasticsearch/src/main/java/cn/segema/cloud/elasticsearch/controller/UserController.java
+/Users/wangyong/mygit/microservice-segema/microservice-elasticsearch/src/main/java/cn/segema/cloud/elasticsearch/controller/RoleController.java
+/Users/wangyong/mygit/microservice-segema/microservice-elasticsearch/src/main/java/cn/segema/cloud/elasticsearch/domain/Personal.java
+/Users/wangyong/mygit/microservice-segema/microservice-elasticsearch/src/main/java/cn/segema/cloud/elasticsearch/repository/RoleRepository.java
+/Users/wangyong/mygit/microservice-segema/microservice-elasticsearch/src/main/java/cn/segema/cloud/elasticsearch/repository/AccountRepository.java
+/Users/wangyong/mygit/microservice-segema/microservice-elasticsearch/src/main/java/cn/segema/cloud/elasticsearch/domain/User.java
+/Users/wangyong/mygit/microservice-segema/microservice-elasticsearch/src/main/java/cn/segema/cloud/elasticsearch/controller/AccountController.java
+/Users/wangyong/mygit/microservice-segema/microservice-elasticsearch/src/main/java/cn/segema/cloud/elasticsearch/repository/UserRepository.java

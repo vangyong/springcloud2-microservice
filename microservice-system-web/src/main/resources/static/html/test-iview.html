@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ZH">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="content-language" content="zh-CN" />
+    <title>index</title>
+    <!-- <link rel="stylesheet" type="text/css" href="/plugins/iview/styles/iview.css">
+    <script type="text/javascript" src="/plugins/vue-2.4.0/vue.min.js"></script>
+    <script type="text/javascript" src="/plugins/iview/iview.min.js"></script> -->
+    
+    <link rel="stylesheet" type="text/css" href="http://unpkg.com/iview/dist/styles/iview.css">
+    <script type="text/javascript" src="http://vuejs.org/js/vue.min.js"></script>
+    <script type="text/javascript" src="http://unpkg.com/iview/dist/iview.min.js"></script>
+</head>
+<body>
+<div id="app">
+    <Row>
+        <i-col span="12">
+            <Steps :current="2">
+                <Step title="已完成" content="这里是该步骤的描述信息"></Step>
+                <Step title="进行中" content="这里是该步骤的描述信息"></Step>
+                <Step title="待进行" content="这里是该步骤的描述信息"></Step>
+                <Step title="待进行" content="这里是该步骤的描述信息"></Step>
+            </Steps>
+        </i-col>
+        <i-col span="12">
+            <Tabs value="name1">
+        <Tab-pane label="我是" name="name1">你好</Tab-pane>
+        <Tab-pane label="你好" name="name2">我是</Tab-pane>
+    </Tabs>
+             <i-button @click="show">Click me!</i-button>
+        </i-col>
+    </Row>
+    
+    
+    <Modal v-model="visible" title="Welcome">欢迎使用 iView</Modal>
+    <Slider v-model="value1"></Slider>
+    <Slider v-model="value2" range></Slider>
+    <Slider v-model="value3" range disabled></Slider>
+    
+    <i-Input v-model="value4" i-size="large" placeholder="large size">
+    	 	<span slot="prepend">http://</span>
+        <span slot="append">.com</span>
+    </i-Input>
+    <i-br>
+    <i-Input v-model="value5" placeholder="default size"></i-Input>
+    <i-br>
+    <i-Input v-model="value6" i-size="small" placeholder="small size"></i-Input>
+    
+
+
+<template>
+	 <i-RadioGroup v-model="phone">
+        <i-Radio label="apple">
+            <i-Icon type="social-apple"></i-Icon>
+            <i-span>Apple</i-span>
+        </i-Radio>
+        <i-Radio label="android">
+            <i-Icon type="social-android"></i-Icon>
+            <i-span>Android</i-span>
+        </i-Radio>
+        <i-Radio label="windows">
+            <i-Icon type="social-windows"></i-Icon>
+            <i-span>Windows</i-span>
+        </i-Radio>
+    </i-RadioGroup>
+ </template>   
+    <!-- <RadioGroup v-model="animal">
+        <Radio label="金斑蝶"></Radio>
+        <Radio label="爪哇犀牛"></Radio>
+        <Radio label="印度黑羚"></Radio>
+    </RadioGroup>  -->
+    
+</div>
+
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+             visible: false,
+             theme1: 'light',
+             value1: 25,
+             value2: [20, 50],
+             value3: [20, 50],
+             value4: '',
+             value5: 'value5 的值',
+             value6: 'value6 的值',
+            	 phone: 'apple'
+        },
+        methods: {
+            show: function () {
+                this.visible = true;
+            }
+        }
+    })
+  </script>
+</body>
+</html>

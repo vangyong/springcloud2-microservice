@@ -1,0 +1,4 @@
+/Users/wangyong/mygit/microservice-segema/microservice-consumer-movie-feign/src/main/java/com/itmuch/cloud/study/user/controller/FeignController.java
+/Users/wangyong/mygit/microservice-segema/microservice-consumer-movie-feign/src/main/java/com/itmuch/cloud/study/MovieFeignApplication.java
+/Users/wangyong/mygit/microservice-segema/microservice-consumer-movie-feign/src/main/java/com/itmuch/cloud/study/user/entity/User.java
+/Users/wangyong/mygit/microservice-segema/microservice-consumer-movie-feign/src/main/java/com/itmuch/cloud/study/user/feign/UserFeignClient.java

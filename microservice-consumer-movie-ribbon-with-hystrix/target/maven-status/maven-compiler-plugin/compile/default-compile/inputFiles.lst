@@ -1,0 +1,4 @@
+/Users/wangyong/mygit/microservice-segema/microservice-consumer-movie-ribbon-with-hystrix/src/main/java/com/itmuch/cloud/study/user/controller/RibbonHystrixController.java
+/Users/wangyong/mygit/microservice-segema/microservice-consumer-movie-ribbon-with-hystrix/src/main/java/com/itmuch/cloud/study/user/service/RibbonHystrixService.java
+/Users/wangyong/mygit/microservice-segema/microservice-consumer-movie-ribbon-with-hystrix/src/main/java/com/itmuch/cloud/study/user/entity/User.java
+/Users/wangyong/mygit/microservice-segema/microservice-consumer-movie-ribbon-with-hystrix/src/main/java/com/itmuch/cloud/study/MovieRibbonHystrixApplication.java

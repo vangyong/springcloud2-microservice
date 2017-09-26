@@ -1,0 +1,11 @@
+/Users/wangyong/mygit/microservice-segema/microservice-flowable/src/main/java/cn/segema/cloud/flowable/enums/WeekEnum.java
+/Users/wangyong/mygit/microservice-segema/microservice-flowable/src/main/java/cn/segema/cloud/flowable/controller/FlowableController.java
+/Users/wangyong/mygit/microservice-segema/microservice-flowable/src/main/java/cn/segema/cloud/flowable/vo/UserPersonalVO.java
+/Users/wangyong/mygit/microservice-segema/microservice-flowable/src/main/java/cn/segema/cloud/flowable/domain/ApplySimple.java
+/Users/wangyong/mygit/microservice-segema/microservice-flowable/src/main/java/cn/segema/cloud/flowable/enums/UserTypeEnum.java
+/Users/wangyong/mygit/microservice-segema/microservice-flowable/src/main/java/cn/segema/cloud/flowable/FlowableApplication.java
+/Users/wangyong/mygit/microservice-segema/microservice-flowable/src/main/java/cn/segema/cloud/flowable/controller/FlowableUserController.java
+/Users/wangyong/mygit/microservice-segema/microservice-flowable/src/main/java/cn/segema/cloud/flowable/service/FlowableService.java
+/Users/wangyong/mygit/microservice-segema/microservice-flowable/src/main/java/cn/segema/cloud/flowable/repository/ApplySimpleRepository.java
+/Users/wangyong/mygit/microservice-segema/microservice-flowable/src/main/java/cn/segema/cloud/flowable/repository/FlowableUserRepository.java
+/Users/wangyong/mygit/microservice-segema/microservice-flowable/src/main/java/cn/segema/cloud/flowable/domain/FlowableUser.java

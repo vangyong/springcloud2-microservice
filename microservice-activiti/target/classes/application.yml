@@ -1,0 +1,40 @@
+server:
+  port: 12006
+spring:
+  application: 
+    name: microservice-activiti    # 项目名称尽量用小写
+  jpa:
+    database: MYSQL
+    generate-ddl: false
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties: 
+      hibernate: 
+        dialect : org.hibernate.dialect.MySQL5Dialect
+  datasource:                           # 指定数据源
+    url: jdbc:mysql://127.0.0.1:3306/microservice_activiti
+    driverClassName: com.mysql.jdbc.Driver
+    username: root  
+    password: root
+    
+#  thymeleaf:
+#        cache: false
+#        prefix: classpath:/public/
+#        suffix: .html
+#        mode: HTML5
+#        encoding: UTF-8
+#        content-type: text/html
+logging:
+  level:
+    root: INFO
+    org.hibernate: INFO
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+    org.hibernate.type.descriptor.sql.BasicExtractor: TRACE
+    com.itmuch.youran.persistence: ERROR
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://discovery:8761/eureka/    # 指定注册中心的地址
+  instance:
+    preferIpAddress: true
