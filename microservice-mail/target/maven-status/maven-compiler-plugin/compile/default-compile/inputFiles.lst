@@ -1,0 +1,14 @@
+/Users/wangyong/mygit/springcloud-learn/microservice-mail/src/main/java/cn/segema/cloud/mail/test/repository/ApplySimpleRepository.java
+/Users/wangyong/mygit/springcloud-learn/microservice-mail/src/main/java/cn/segema/cloud/mail/test/vo/UserPersonalVO.java
+/Users/wangyong/mygit/springcloud-learn/microservice-mail/src/main/java/cn/segema/cloud/mail/service/EmailServiceImpl.java
+/Users/wangyong/mygit/springcloud-learn/microservice-mail/src/main/java/cn/segema/cloud/mail/controller/MailController.java
+/Users/wangyong/mygit/springcloud-learn/microservice-mail/src/main/java/cn/segema/cloud/mail/enums/UserTypeEnum.java
+/Users/wangyong/mygit/springcloud-learn/microservice-mail/src/main/java/cn/segema/cloud/mail/MailApplication.java
+/Users/wangyong/mygit/springcloud-learn/microservice-mail/src/main/java/cn/segema/cloud/mail/test/domain/ApplySimple.java
+/Users/wangyong/mygit/springcloud-learn/microservice-mail/src/main/java/cn/segema/cloud/mail/test/service/ActivitiService.java
+/Users/wangyong/mygit/springcloud-learn/microservice-mail/src/main/java/cn/segema/cloud/mail/enums/WeekEnum.java
+/Users/wangyong/mygit/springcloud-learn/microservice-mail/src/main/java/cn/segema/cloud/mail/test/controller/ActivitiUserController.java
+/Users/wangyong/mygit/springcloud-learn/microservice-mail/src/main/java/cn/segema/cloud/mail/test/domain/ActivitiUser.java
+/Users/wangyong/mygit/springcloud-learn/microservice-mail/src/main/java/cn/segema/cloud/mail/test/repository/ActivitiUserRepository.java
+/Users/wangyong/mygit/springcloud-learn/microservice-mail/src/main/java/cn/segema/cloud/mail/service/EmailConfig.java
+/Users/wangyong/mygit/springcloud-learn/microservice-mail/src/main/java/cn/segema/cloud/mail/service/EmailService.java

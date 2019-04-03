@@ -1,5 +1,5 @@
-/Users/wangyong/mygit/microservice-segema/microservice-system-web/src/main/java/cn/segema/cloud/system/web/vo/UserVO.java
-/Users/wangyong/mygit/microservice-segema/microservice-system-web/src/main/java/cn/segema/cloud/system/web/util/JacksonUtil.java
-/Users/wangyong/mygit/microservice-segema/microservice-system-web/src/main/java/cn/segema/cloud/system/web/service/UserWebService.java
-/Users/wangyong/mygit/microservice-segema/microservice-system-web/src/main/java/cn/segema/cloud/system/web/SystemWebApplication.java
-/Users/wangyong/mygit/microservice-segema/microservice-system-web/src/main/java/cn/segema/cloud/system/web/controller/UserWebController.java
+/Users/wangyong/mygit/springcloud-learn/microservice-system-web/src/main/java/cn/segema/cloud/system/web/vo/UserVO.java
+/Users/wangyong/mygit/springcloud-learn/microservice-system-web/src/main/java/cn/segema/cloud/system/web/controller/UserWebController.java
+/Users/wangyong/mygit/springcloud-learn/microservice-system-web/src/main/java/cn/segema/cloud/system/web/service/UserWebService.java
+/Users/wangyong/mygit/springcloud-learn/microservice-system-web/src/main/java/cn/segema/cloud/system/web/util/JacksonUtil.java
+/Users/wangyong/mygit/springcloud-learn/microservice-system-web/src/main/java/cn/segema/cloud/system/web/SystemWebApplication.java

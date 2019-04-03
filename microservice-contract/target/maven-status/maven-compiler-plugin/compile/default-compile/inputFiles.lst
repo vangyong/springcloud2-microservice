@@ -1,5 +1,5 @@
-/Users/wangyong/mygit/microservice-segema/microservice-contract/src/main/java/cn/segema/cloud/contract/ContractApplication.java
-/Users/wangyong/mygit/microservice-segema/microservice-contract/src/main/java/cn/segema/cloud/contract/vo/UserVO.java
-/Users/wangyong/mygit/microservice-segema/microservice-contract/src/main/java/cn/segema/cloud/contract/controller/ContractController.java
-/Users/wangyong/mygit/microservice-segema/microservice-contract/src/main/java/cn/segema/cloud/contract/domain/Contract.java
-/Users/wangyong/mygit/microservice-segema/microservice-contract/src/main/java/cn/segema/cloud/contract/repository/ContractRepository.java
+/Users/wangyong/mygit/springcloud-learn/microservice-contract/src/main/java/cn/segema/cloud/contract/ContractApplication.java
+/Users/wangyong/mygit/springcloud-learn/microservice-contract/src/main/java/cn/segema/cloud/contract/domain/Contract.java
+/Users/wangyong/mygit/springcloud-learn/microservice-contract/src/main/java/cn/segema/cloud/contract/repository/ContractRepository.java
+/Users/wangyong/mygit/springcloud-learn/microservice-contract/src/main/java/cn/segema/cloud/contract/vo/UserVO.java
+/Users/wangyong/mygit/springcloud-learn/microservice-contract/src/main/java/cn/segema/cloud/contract/controller/ContractController.java

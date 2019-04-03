@@ -1,4 +1,4 @@
-/Users/wangyong/mygit/microservice-segema/microservice-consumer-movie-feign-with-hystrix/src/main/java/com/itmuch/cloud/study/user/entity/User.java
-/Users/wangyong/mygit/microservice-segema/microservice-consumer-movie-feign-with-hystrix/src/main/java/com/itmuch/cloud/study/user/feign/UserFeignHystrixClient.java
-/Users/wangyong/mygit/microservice-segema/microservice-consumer-movie-feign-with-hystrix/src/main/java/com/itmuch/cloud/study/user/controller/FeignHystrixController.java
-/Users/wangyong/mygit/microservice-segema/microservice-consumer-movie-feign-with-hystrix/src/main/java/com/itmuch/cloud/study/MovieFeignHystrixApplication.java
+/Users/wangyong/mygit/springcloud-learn/microservice-consumer-movie-feign-with-hystrix/src/main/java/com/itmuch/cloud/study/user/feign/UserFeignHystrixClient.java
+/Users/wangyong/mygit/springcloud-learn/microservice-consumer-movie-feign-with-hystrix/src/main/java/com/itmuch/cloud/study/MovieFeignHystrixApplication.java
+/Users/wangyong/mygit/springcloud-learn/microservice-consumer-movie-feign-with-hystrix/src/main/java/com/itmuch/cloud/study/user/entity/User.java
+/Users/wangyong/mygit/springcloud-learn/microservice-consumer-movie-feign-with-hystrix/src/main/java/com/itmuch/cloud/study/user/controller/FeignHystrixController.java

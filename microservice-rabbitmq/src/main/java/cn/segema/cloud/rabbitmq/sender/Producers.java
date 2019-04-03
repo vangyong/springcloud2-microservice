@@ -14,8 +14,8 @@ public class Producers {
 
 	public void send(Student student) {
 		System.out.println("send start.....");
-		//rabbitSendTemplate.convertAndSend("default.topic", "test2.send", student);
-		rabbitSendTemplate.convertAndSend("myFanoutExhange", "",student);
+		rabbitSendTemplate.convertAndSend("default.topic", "test2.send", student);
+		//rabbitSendTemplate.convertAndSend("myFanoutExhange", "",student);
 	}
 
 }
