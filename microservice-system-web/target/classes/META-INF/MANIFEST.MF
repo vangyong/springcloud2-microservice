@@ -3,7 +3,7 @@ Implementation-Title: microservice-system-web
 Implementation-Version: 0.0.1-SNAPSHOT
 Built-By: wangyong
 Implementation-Vendor-Id: cn.segema.cloud
-Build-Jdk: 1.8.0_144
+Build-Jdk: 1.8.0_152
 Implementation-URL: http://projects.spring.io/spring-boot/spring-cloud
  -microservice/microservice-system-web/
 Created-By: Maven Integration for Eclipse
