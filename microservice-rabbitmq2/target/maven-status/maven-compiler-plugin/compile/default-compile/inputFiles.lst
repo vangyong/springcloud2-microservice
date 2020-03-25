@@ -1,8 +1,0 @@
-/Users/wangyong/mygit/springcloud-learn/microservice-rabbitmq2/src/main/java/cn/segema/cloud/rabbitmq/sender/Producers.java
-/Users/wangyong/mygit/springcloud-learn/microservice-rabbitmq2/src/main/java/cn/segema/cloud/rabbitmq/RabbitMQ2Application.java
-/Users/wangyong/mygit/springcloud-learn/microservice-rabbitmq2/src/main/java/cn/segema/cloud/rabbitmq/config/ProducerConfig.java
-/Users/wangyong/mygit/springcloud-learn/microservice-rabbitmq2/src/main/java/cn/segema/cloud/rabbitmq/controller/TestController.java
-/Users/wangyong/mygit/springcloud-learn/microservice-rabbitmq2/src/main/java/cn/segema/cloud/rabbitmq/config/RabbitMQConfig.java
-/Users/wangyong/mygit/springcloud-learn/microservice-rabbitmq2/src/main/java/cn/segema/cloud/rabbitmq/util/RabbitUtil.java
-/Users/wangyong/mygit/springcloud-learn/microservice-rabbitmq2/src/main/java/cn/segema/cloud/rabbitmq/domain/Student.java
-/Users/wangyong/mygit/springcloud-learn/microservice-rabbitmq2/src/main/java/cn/segema/cloud/rabbitmq/receiver/Consumers.java

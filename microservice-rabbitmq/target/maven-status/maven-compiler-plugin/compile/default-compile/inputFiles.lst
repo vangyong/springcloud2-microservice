@@ -1,5 +1,0 @@
-/Users/wangyong/mygit/springcloud-learn/microservice-rabbitmq/src/main/java/cn/segema/cloud/rabbitmq/controller/TestController.java
-/Users/wangyong/mygit/springcloud-learn/microservice-rabbitmq/src/main/java/cn/segema/cloud/rabbitmq/receiver/Consumers.java
-/Users/wangyong/mygit/springcloud-learn/microservice-rabbitmq/src/main/java/cn/segema/cloud/rabbitmq/RabbitMQApplication.java
-/Users/wangyong/mygit/springcloud-learn/microservice-rabbitmq/src/main/java/cn/segema/cloud/rabbitmq/domain/Student.java
-/Users/wangyong/mygit/springcloud-learn/microservice-rabbitmq/src/main/java/cn/segema/cloud/rabbitmq/sender/Producers.java

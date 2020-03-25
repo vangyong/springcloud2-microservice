@@ -9,31 +9,12 @@
   <packaging>pom</packaging>
 
   <modules>
-    <module>microservice-discovery-eureka</module>
-    <module>microservice-consumer-movie-ribbon</module>
-    <module>microservice-consumer-movie-feign</module>
-    <module>microservice-consumer-movie-ribbon-with-hystrix</module>
-    <module>microservice-consumer-movie-feign-with-hystrix</module>
-    <module>microservice-hystrix-dashboard</module>
-    <module>microservice-consumer-movie-feign-with-hystrix-stream</module>
-    <module>microservice-hystrix-turbine</module>
-    <module>microservice-config-server</module>
-    <module>microservice-config-client</module>
-    <module>microservice-config-server-eureka</module>
-    <module>microservice-config-client-eureka</module>
-    <module>microservice-api-gateway</module>
+    <module>microservice-discovery</module>
+    <module>microservice-config</module>
+    <module>microservice-gateway</module>
     <module>microservice-system</module>
     <module>microservice-system-web</module>
-    <module>microservice-contract</module>
-    <module>microservice-contract-web</module>
-    <module>microservice-rabbitmq</module>
-    <module>microservice-rabbitmq2</module>
-    <module>microservice-elasticsearch</module>
-    <module>microservice-activiti</module>
-    <module>microservice-activiti-web</module>
     <module>microservice-flowable</module>
-    <module>microservice-mail</module>
-    <module>microservice-performance</module>
     <module>microservice-filecenter</module>
   </modules>
 
@@ -41,7 +22,7 @@
   <parent>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
-    <version>1.5.6.RELEASE</version>
+    <version>2.2.3.RELEASE</version>
   </parent>
 
   <properties>
@@ -54,7 +35,7 @@
       <dependency>
         <groupId>org.springframework.cloud</groupId>
         <artifactId>spring-cloud-dependencies</artifactId>
-        <version>Dalston.SR2</version>
+        <version>Hoxton.SR3</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>microservice-hystrix-turbine</name>
+	<name>microservice-monitor</name>
 	<comment></comment>
 	<projects>
 	</projects>
