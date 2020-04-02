@@ -34,7 +34,7 @@
 | microservice-config                | 8040 | 配置服务                   | 详见文章            |
 | microservice-discovery            | 8761 | 注册中心                   | /               |
 | microservice-monitor             | 8030 | hystrix监控              | /hystrix.stream |
-| microservice-system                      | 12000 | 系统管理服务提供者               | /1              |
-| microservice-system-web                  | 12001 | 系统管理服务消费者               | /1              |
-| microservice-flowable                    | 12008 | 合同管理服务提供者               | /1              |
+| microservice-system                      | 12000 | 系统管理服务.                   | /1              |
+| microservice-system-web                  | 12001 | 系统管理服务前端                 | /1              |
+| microservice-flowable                    | 12008 | 流程服务                        | /1              |
 | microservice-filecenter                  | 12012 | 文件中心服务                             | /1              |
