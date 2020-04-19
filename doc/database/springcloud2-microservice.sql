@@ -5,17 +5,86 @@
  Source Server Type    : MySQL
  Source Server Version : 50720
  Source Host           : localhost
- Source Database       : microservice-sso
+ Source Database       : springcloud2-microservice
 
  Target Server Type    : MySQL
  Target Server Version : 50720
  File Encoding         : utf-8
 
- Date: 04/14/2019 17:24:04 PM
+ Date: 04/19/2020 13:18:13 PM
 */
 
 SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
+
+-- ----------------------------
+--  Table structure for `demo_personal`
+-- ----------------------------
+DROP TABLE IF EXISTS `demo_personal`;
+CREATE TABLE `demo_personal` (
+  `personal_id` varchar(255) COLLATE utf8_bin NOT NULL,
+  `blood_type` varchar(10) COLLATE utf8_bin DEFAULT NULL,
+  `born_time` bigint(13) DEFAULT NULL,
+  `create_time` bigint(13) DEFAULT NULL,
+  `email` varchar(255) COLLATE utf8_bin DEFAULT NULL,
+  `gender` varchar(255) COLLATE utf8_bin DEFAULT NULL,
+  `groupid` varchar(255) COLLATE utf8_bin DEFAULT NULL,
+  `height` decimal(19,2) DEFAULT NULL,
+  `mobile_number` varchar(64) COLLATE utf8_bin DEFAULT NULL,
+  `personal_name` varchar(255) COLLATE utf8_bin DEFAULT NULL,
+  `weight` decimal(19,2) DEFAULT NULL,
+  PRIMARY KEY (`personal_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+-- ----------------------------
+--  Table structure for `demo_role`
+-- ----------------------------
+DROP TABLE IF EXISTS `demo_role`;
+CREATE TABLE `demo_role` (
+  `role_id` varchar(19) COLLATE utf8_bin NOT NULL,
+  `deletestatus` int(2) DEFAULT NULL,
+  `description` varchar(255) COLLATE utf8_bin DEFAULT NULL,
+  `locked` int(2) DEFAULT NULL,
+  `role_code` varchar(64) COLLATE utf8_bin DEFAULT NULL,
+  `role_name` varchar(255) COLLATE utf8_bin DEFAULT NULL,
+  PRIMARY KEY (`role_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+-- ----------------------------
+--  Table structure for `demo_user`
+-- ----------------------------
+DROP TABLE IF EXISTS `demo_user`;
+CREATE TABLE `demo_user` (
+  `user_id` varchar(19) COLLATE utf8_bin NOT NULL,
+  `create_time` bigint(13) DEFAULT NULL,
+  `credentialssalt` varchar(255) COLLATE utf8_bin DEFAULT NULL,
+  `mobile_number` varchar(255) COLLATE utf8_bin DEFAULT NULL,
+  `nick_name` varchar(255) COLLATE utf8_bin DEFAULT NULL,
+  `password` varchar(255) COLLATE utf8_bin DEFAULT NULL,
+  `user_name` varchar(255) COLLATE utf8_bin DEFAULT NULL,
+  `mobilenumber` varchar(255) COLLATE utf8_bin DEFAULT NULL,
+  PRIMARY KEY (`user_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+-- ----------------------------
+--  Records of `demo_user`
+-- ----------------------------
+BEGIN;
+INSERT INTO `demo_user` VALUES ('1', null, '1', '1', 'demo user', null, '测试用户名', '131'), ('275180476253184', '0', '', null, 'test2', '123456', 'test2', '2'), ('275181334845440', null, '', null, 'test3', '123456', 'test3', '3');
+COMMIT;
+
+-- ----------------------------
+--  Table structure for `demo_user_personal`
+-- ----------------------------
+DROP TABLE IF EXISTS `demo_user_personal`;
+CREATE TABLE `demo_user_personal` (
+  `user_personal_id` varchar(255) COLLATE utf8_bin NOT NULL,
+  `personal_id` varchar(255) COLLATE utf8_bin DEFAULT NULL,
+  `user_id` varchar(255) COLLATE utf8_bin DEFAULT NULL,
+  PRIMARY KEY (`user_personal_id`),
+  KEY `FK14tu7s2t7wnb63riro0xfh13o` (`personal_id`),
+  KEY `FKl3e0twurup924udvhw9h6hqhw` (`user_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 -- ----------------------------
 --  Table structure for `oauth_access_token`
