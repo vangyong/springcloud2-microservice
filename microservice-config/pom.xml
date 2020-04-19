@@ -8,8 +8,8 @@
 
   <parent>
     <groupId>cn.segema.cloud</groupId>
-    <artifactId>spring-cloud-microservice</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <artifactId>springcloud2-microservice</artifactId>
+    <version>${parent-version}</version>
   </parent>
 
   <dependencies>
@@ -19,7 +19,7 @@
     </dependency>
     <dependency>
       <groupId>org.springframework.cloud</groupId>
-      <artifactId>spring-cloud-starter-eureka</artifactId>
+      <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
     </dependency>
   </dependencies>
 </project>

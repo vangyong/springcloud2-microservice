@@ -1,6 +1,6 @@
 spring:
   application:
-    name: microservice-api-gateway
+    name: microservice-gateway
 server:
   port: 8050
 eureka:

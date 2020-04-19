@@ -6,8 +6,8 @@
 	
 	<parent>
 		<groupId>cn.segema.cloud</groupId>
-		<artifactId>spring-cloud-microservice</artifactId>
-		<version>0.0.1-SNAPSHOT</version>
+		<artifactId>springcloud2-microservice</artifactId>
+		<version>0.0.1</version>
 	</parent>
 
 	<dependencies>

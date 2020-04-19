@@ -1,8 +1,7 @@
-package com.itmuch.cloud.study;
+package cn.segema.cloud.gateway;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 
 /**
  * 使用@EnableZuulProxy注解激活zuul。
@@ -11,8 +10,8 @@ import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
  */
 @SpringBootApplication
 @EnableZuulProxy
-public class ZuulApiGatewayApplication {
+public class GatewayZuulApplication {
   public static void main(String[] args) {
-    SpringApplication.run(ZuulApiGatewayApplication.class, args);
+    SpringApplication.run(GatewayZuulApplication.class, args);
   }
 }

@@ -1,7 +1,6 @@
-package cn.segema.cloud.system.controller;
+package cn.segema.cloud.demo.controller;
 
 import java.util.List;
-import java.util.Optional;
 import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,8 +13,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import cn.segema.cloud.system.domain.Role;
-import cn.segema.cloud.system.repository.RoleRepository;
+import cn.segema.cloud.demo.domain.Role;
+import cn.segema.cloud.demo.repository.RoleRepository;
 
 /**
  * 角色Controller
@@ -39,8 +38,8 @@ public class RoleController {
 	   */
 	@GetMapping("/{id}")
 	public Role findById(@PathVariable String id) {
-		Optional<Role> findOne = this.roleRepository.findById(id);
-		return findOne.get();
+		Role findOne = this.roleRepository.findOne(id);
+		return findOne;
 	}
 
 	@GetMapping("/list")
@@ -71,6 +70,17 @@ public class RoleController {
 	public Role delete(Role role) {
 		roleRepository.delete(role);
 		return role;
+	}
+
+	/**
+	 * 本地服务实例的信息
+	 * 
+	 * @return ServiceInstance
+	 */
+	@GetMapping("/instance-info")
+	public ServiceInstance showInfo() {
+		ServiceInstance localServiceInstance = this.discoveryClient.getLocalServiceInstance();
+		return localServiceInstance;
 	}
 
 }

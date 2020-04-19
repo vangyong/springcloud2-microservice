@@ -1,7 +1,6 @@
-package cn.segema.cloud.system.controller;
+package cn.segema.cloud.demo.controller;
 
 import java.util.List;
-import java.util.Optional;
 import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,34 +18,33 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import cn.segema.cloud.system.common.Pager;
-import cn.segema.cloud.system.domain.User;
-import cn.segema.cloud.system.repository.UserRepository;
-import cn.segema.cloud.system.vo.UserPersonalVO;
+import cn.segema.cloud.demo.common.Pager;
+import cn.segema.cloud.demo.domain.User;
+import cn.segema.cloud.demo.repository.UserRepository;
+import cn.segema.cloud.demo.vo.UserPersonalVO;
 
 @RestController
 @RequestMapping(value = "/user")
 public class UserController {
-	@Autowired
-	private DiscoveryClient discoveryClient;
-	@Autowired
-	private UserRepository userRepository;
+  @Autowired
+  private DiscoveryClient discoveryClient;
+  @Autowired
+  private UserRepository userRepository;
 
-	/**
-	 * 注：@GetMapping("/{id}")是spring 4.3的新注解等价于：
-	 * 
-	 * @RequestMapping(value = "/id", method = RequestMethod.GET)
-	 *                       类似的注解还有@PostMapping等等
-	 * @param id
-	 * @return user信息
-	 */
-	@GetMapping("/{userId}")
-	public User findById(@PathVariable String userId) {
-		Optional<User> findOne = this.userRepository.findById(userId);
-		return findOne.get();
-	}
-
-	@GetMapping("/list")
+  /**
+   * 注：@GetMapping("/{id}")是spring 4.3的新注解等价于：
+   * @RequestMapping(value = "/id", method = RequestMethod.GET)
+   * 类似的注解还有@PostMapping等等
+   * @param id
+   * @return user信息
+   */
+  @GetMapping("/{userId}")
+  public User findById(@PathVariable String userId) {
+    User findOne = this.userRepository.findOne(userId);
+    return findOne;
+  }
+  
+  @GetMapping("/list")
 	public List<User> list(User user, Model model) {
 		List<User> userList = userRepository.findAll();
 		return userList;
@@ -74,23 +72,25 @@ public class UserController {
 		userRepository.delete(user);
 		return user;
 	}
-
-	@GetMapping("/listUserPersonalByUserName/{userName}")
-	public List<UserPersonalVO> listUserPersonalByUserName(@PathVariable String userName) {
-		List<UserPersonalVO> userList = userRepository.findUserPersonalByUserName(userName);
-		return userList;
+  
+  
+  @GetMapping("/listUserPersonalByUserName/{userName}") 
+  public List<UserPersonalVO> listUserPersonalByUserName(@PathVariable String userName) {
+	  List<UserPersonalVO> userList = userRepository.findUserPersonalByUserName(userName);
+	  return userList;
 	}
-
+  
+  
 //  @GetMapping("/listByPage/{page}/{size}")
 //	public Page<User> listByPage(@PathVariable Integer page,@PathVariable Integer size) {
 //		Sort sort = new Sort(Direction.DESC, "userId");
 //		Pageable pageable = new PageRequest(page, size, sort);
 //		return userRepository.findAll(pageable);
 //	}
-	@GetMapping("/listByPage")
+  @GetMapping("/listByPage")
 	public Pager<User> listByPage() {
-		Sort sort = Sort.by(Direction.DESC, "userId");
-		Pageable pageable = PageRequest.of(0, 30, sort);
+		Sort sort = new Sort(Direction.DESC, "userId");
+		Pageable pageable = new PageRequest(0, 30, sort);
 		Page<User> page = userRepository.findAll(pageable);
 		Pager<User> pager = new Pager<User>();
 		pager.setCode("0");
@@ -99,4 +99,14 @@ public class UserController {
 		pager.setData(page.getContent());
 		return pager;
 	}
+  
+  /**
+   * 本地服务实例的信息
+   * @return
+   */
+  @GetMapping("/instance-info")
+  public ServiceInstance showInfo() {
+    ServiceInstance localServiceInstance = this.discoveryClient.getLocalServiceInstance();
+    return localServiceInstance;
+  }
 }
