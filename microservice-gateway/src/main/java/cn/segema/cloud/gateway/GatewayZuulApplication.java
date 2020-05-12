@@ -2,6 +2,7 @@ package cn.segema.cloud.gateway;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 
 /**
  * 使用@EnableZuulProxy注解激活zuul。

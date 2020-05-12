@@ -19,8 +19,8 @@
 		<module>microservice-system</module>
 		<module>microservice-system-web</module>
 		<module>microservice-flowable</module>
-		
-		
+
+
 	</modules>
 
 	<!-- 使用最新的spring-boot版本 -->

@@ -4,16 +4,8 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
-import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cloud.client.ServiceInstance;
-import org.springframework.cloud.client.discovery.DiscoveryClient;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Pageable;
-import org.springframework.data.domain.Sort;
-import org.springframework.data.domain.Sort.Direction;
 import org.springframework.data.redis.core.HashOperations;
 import org.springframework.data.redis.core.ListOperations;
 import org.springframework.data.redis.core.RedisTemplate;
@@ -33,8 +25,6 @@ import cn.segema.cloud.demo.vo.UserVO;
 @RestController
 @RequestMapping(value = "/test")
 public class TestController {
-  @Autowired
-  private DiscoveryClient discoveryClient;
   
   @Autowired
   private StringRedisTemplate stringRedisTemplate;
@@ -82,16 +72,4 @@ public class TestController {
 		return userList;
 	}
 
-	
- 
-
-  /**
-   * 本地服务实例的信息
-   * @return
-   */
-  @GetMapping("/instance-info")
-  public ServiceInstance showInfo() {
-    ServiceInstance localServiceInstance = this.discoveryClient.getLocalServiceInstance();
-    return localServiceInstance;
-  }
 }

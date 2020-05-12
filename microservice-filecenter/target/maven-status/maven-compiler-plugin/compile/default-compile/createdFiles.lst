@@ -1,0 +1,8 @@
+cn/segema/cloud/filecenter/controller/FilecenterController.class
+cn/segema/cloud/filecenter/vo/FilecenterVO.class
+cn/segema/cloud/filecenter/config/FeignMultipartSupportConfig.class
+cn/segema/cloud/filecenter/vo/UploadVO.class
+cn/segema/cloud/filecenter/FilecenterApplication.class
+cn/segema/cloud/filecenter/repository/FilecenterRepository.class
+cn/segema/cloud/filecenter/domain/Filecenter.class
+cn/segema/cloud/filecenter/util/FileUtil.class

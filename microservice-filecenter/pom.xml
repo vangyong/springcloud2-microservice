@@ -1,20 +1,21 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<artifactId>microservice-filecenter</artifactId>
 	<packaging>jar</packaging>
-	
+
 	<parent>
 		<groupId>cn.segema.cloud</groupId>
 		<artifactId>springcloud2-microservice</artifactId>
-		<version>0.0.1</version>
+		<version>${parent-version}</version>
 	</parent>
 
 	<dependencies>
-		<!-- 服务发现组件Eureka的依赖 -->
+		<!-- Eureka注册中心 客户端的依赖 -->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-eureka</artifactId>
+			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
 		</dependency>
 		<!-- springdata-jpa的依赖 -->
 		<dependency>
@@ -24,51 +25,39 @@
 		<!-- 数据库mysql的依赖 -->
 		<dependency>
 			<groupId>mysql</groupId>
-		    <artifactId>mysql-connector-java</artifactId>
+			<artifactId>mysql-connector-java</artifactId>
 		</dependency>
-		<!-- feign的依赖 -->
+
+		<!-- <dependency> <groupId>io.github.openfeign.form</groupId> <artifactId>feign-form</artifactId> 
+			<version>2.2.1</version> </dependency> <dependency> <groupId>io.github.openfeign.form</groupId> 
+			<artifactId>feign-form-spring</artifactId> <version>2.1.0</version> </dependency> -->
+
 		<dependency>
-		    <groupId>org.springframework.cloud</groupId>
-		    <artifactId>spring-cloud-starter-feign</artifactId>
-		</dependency>
-		
-		<!-- <dependency>
-            <groupId>io.github.openfeign.form</groupId>
-            <artifactId>feign-form</artifactId>
-            <version>2.2.1</version>
-        </dependency>
-        <dependency>
-            <groupId>io.github.openfeign.form</groupId>
-            <artifactId>feign-form-spring</artifactId>
-            <version>2.1.0</version>
-        </dependency> -->
-        
-         <dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-thymeleaf</artifactId>
 		</dependency>
-		
-		
+
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>
 		</dependency>
-		
-		<dependency>  
-            <groupId>io.springfox</groupId>  
-            <artifactId>springfox-swagger2</artifactId>  
-            <version>2.7.0</version>  
-        </dependency>  
-        <dependency>  
-            <groupId>io.springfox</groupId>  
-            <artifactId>springfox-swagger-ui</artifactId>  
-            <version>2.7.0</version>  
-        </dependency>  
+
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger2</artifactId>
+			<version>2.7.0</version>
+		</dependency>
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger-ui</artifactId>
+			<version>2.7.0</version>
+		</dependency>
 
 	</dependencies>
 </project>
