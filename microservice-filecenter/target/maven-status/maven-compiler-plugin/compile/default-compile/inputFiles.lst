@@ -1,8 +1,0 @@
-/Users/wangyong/mygit/springcloud2-microservice/microservice-filecenter/src/main/java/cn/segema/cloud/filecenter/vo/UploadVO.java
-/Users/wangyong/mygit/springcloud2-microservice/microservice-filecenter/src/main/java/cn/segema/cloud/filecenter/controller/FilecenterController.java
-/Users/wangyong/mygit/springcloud2-microservice/microservice-filecenter/src/main/java/cn/segema/cloud/filecenter/repository/FilecenterRepository.java
-/Users/wangyong/mygit/springcloud2-microservice/microservice-filecenter/src/main/java/cn/segema/cloud/filecenter/config/FeignMultipartSupportConfig.java
-/Users/wangyong/mygit/springcloud2-microservice/microservice-filecenter/src/main/java/cn/segema/cloud/filecenter/domain/Filecenter.java
-/Users/wangyong/mygit/springcloud2-microservice/microservice-filecenter/src/main/java/cn/segema/cloud/filecenter/FilecenterApplication.java
-/Users/wangyong/mygit/springcloud2-microservice/microservice-filecenter/src/main/java/cn/segema/cloud/filecenter/vo/FilecenterVO.java
-/Users/wangyong/mygit/springcloud2-microservice/microservice-filecenter/src/main/java/cn/segema/cloud/filecenter/util/FileUtil.java
