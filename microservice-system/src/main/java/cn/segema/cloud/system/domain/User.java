@@ -1,85 +1,64 @@
 package cn.segema.cloud.system.domain;
 
+import java.math.BigInteger;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-/**
- * 用户
- * @author wangyong
- *
- */
-@Table(name = "SYS_USER")
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import lombok.Data;
+
+@ApiModel("用户")
+@Data
+@Table(name = "sys_user")
 @Entity
 public class User {
+	@ApiModelProperty(value = "用户id")
 	@Id
-	@Column(name = "USERID")
+	@Column(name = "user_id")
 	private String userId;
-	
-	@Column(name = "USERNAME")
+
+	@ApiModelProperty(value = "用户名称")
+	@Column(name = "user_name")
 	private String userName;
-	
-	@Column(name = "NICKNAME")
+
+	@ApiModelProperty(value = "昵称")
+	@Column(name = "nick_name")
 	private String nickName;
-	
-	@Column(name = "PASSWORD")
+
+	@ApiModelProperty(value = "密码")
+	@Column(name = "password")
 	private String password;
-	
-	@Column(name = "MOBILENUMBER")
+
+	@ApiModelProperty(value = "手机号码")
+	@Column(name = "mobile_number")
 	private String mobileNumber;
-	
-	@Column(name = "CREDENTIALSSALT")
+
+	@ApiModelProperty(value = "盐值")
+	@Column(name = "credentials_salt")
 	private String credentialsSalt;
 
-	public String getUserId() {
-		return userId;
-	}
+	@ApiModelProperty(value = "性别(1:男,2:女,3:保密)")
+	@Column(name = "gender")
+	private Integer gender;
 
-	public void setUserId(String userId) {
-		this.userId = userId;
-	}
+	@ApiModelProperty(value = "删除标示(1:已删除,2:未删除)")
+	@Column(name = "delete_status")
+	private Integer deleteStatus;
 
-	public String getUserName() {
-		return this.userName;
-	}
+	@ApiModelProperty(value = "创建时间")
+	@Column(name = "create_time")
+	private BigInteger createTime;
 
-	public void setUserName(String userName) {
-		this.userName = userName;
-	}
+	@ApiModelProperty(value = "租户id")
+	@Column(name = "tenant_id")
+	private String tenantId;
 
-	public String getNickName() {
-		return nickName;
-	}
-
-	public void setNickName(String nickName) {
-		this.nickName = nickName;
-	}
-
-	public String getPassword() {
-		return password;
-	}
-
-	public void setPassword(String password) {
-		this.password = password;
-	}
-
-	public String getMobileNumber() {
-		return mobileNumber;
-	}
-
-	public void setMobileNumber(String mobileNumber) {
-		this.mobileNumber = mobileNumber;
-	}
-
-	public String getCredentialsSalt() {
-		return credentialsSalt;
-	}
-
-	public void setCredentialsSalt(String credentialsSalt) {
-		this.credentialsSalt = credentialsSalt;
-	}
+	@ApiModelProperty(value = "头像url")
+	@Column(name = "avatar_url")
+	private String avatarUrl;
 
 }

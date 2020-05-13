@@ -1,85 +1,52 @@
 package cn.segema.cloud.system.domain;
 
+import java.math.BigInteger;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-/**
- * 角色
- * @author wangyong
- *
- */
-@Table(name = "SYS_ROLE")
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import lombok.Data;
+
+@ApiModel("角色")
+@Data
+@Table(name = "sys_role")
 @Entity
 public class Role {
+	@ApiModelProperty(value="角色id")
 	@Id
-	@Column(name = "ROLEID")
+	@Column(name = "role_id")
 	private String roleId;
 	
-	@Column(name = "ROLENAME")
+	@ApiModelProperty(value="角色名称")
+	@Column(name = "role_name")
 	private String roleName;
 	
-	@Column(name = "ROLECODE")
+	@ApiModelProperty(value="角色编码")
+	@Column(name = "role_code")
 	private String roleCode;
 	
-	@Column(name = "DESCRIPTION")
+	@ApiModelProperty(value="描述")
+	@Column(name = "description")
 	private String description;
 	
-	@Column(name = "LOCKED")
+	@ApiModelProperty(value="上锁状态(1:已锁,2:未锁)")
+	@Column(name = "locked")
 	private Integer locked;
 	
-	@Column(name = "DELETESTATUS")
-	private Integer deletestatus;
-
-	public String getRoleId() {
-		return roleId;
-	}
-
-	public void setRoleId(String roleId) {
-		this.roleId = roleId;
-	}
-
-	public String getRoleName() {
-		return roleName;
-	}
-
-	public void setRoleName(String roleName) {
-		this.roleName = roleName;
-	}
-
-	public String getRoleCode() {
-		return roleCode;
-	}
-
-	public void setRoleCode(String roleCode) {
-		this.roleCode = roleCode;
-	}
-
-	public String getDescription() {
-		return description;
-	}
-
-	public void setDescription(String description) {
-		this.description = description;
-	}
-
-	public Integer getLocked() {
-		return locked;
-	}
-
-	public void setLocked(Integer locked) {
-		this.locked = locked;
-	}
-
-	public Integer getDeletestatus() {
-		return deletestatus;
-	}
-
-	public void setDeletestatus(Integer deletestatus) {
-		this.deletestatus = deletestatus;
-	}
+	@ApiModelProperty(value="删除标示(1:已删除,2:未删除)")
+	@Column(name = "delete_status")
+	private Integer deleteStatus;
+	
+	@ApiModelProperty(value="创建时间")
+	@Column(name = "create_time")
+	private BigInteger createTime;
+	
+    @ApiModelProperty(value="租户id")
+    @Column(name = "tenant_id")
+    private String tenantId;
 
 }

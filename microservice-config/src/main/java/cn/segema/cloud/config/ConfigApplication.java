@@ -8,8 +8,8 @@ import org.springframework.cloud.config.server.EnableConfigServer;
 @SpringBootApplication
 @EnableConfigServer
 @EnableDiscoveryClient
-public class ConfigEurekaApplication {
+public class ConfigApplication {
   public static void main(String[] args) {
-    SpringApplication.run(ConfigEurekaApplication.class, args);
+    SpringApplication.run(ConfigApplication.class, args);
   }
 }

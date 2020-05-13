@@ -25,10 +25,6 @@ public class FlowableUserController {
 	private FlowableUserRepository activitiUserRepository;
 
 	/**
-	 * 注：@GetMapping("/{id}")是spring 4.3的新注解等价于：
-	 * 
-	 * @RequestMapping(value = "/id", method = RequestMethod.GET)
-	 *                       类似的注解还有@PostMapping等等
 	 * @param id
 	 * @return user信息
 	 */

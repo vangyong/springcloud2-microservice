@@ -8,7 +8,6 @@ import org.flowable.engine.RepositoryService;
 import org.flowable.engine.RuntimeService;
 import org.flowable.engine.TaskService;
 import org.flowable.engine.runtime.ProcessInstance;
-import org.flowable.engine.task.Task;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -33,7 +32,7 @@ public class FlowableService {
 	}
 
 	// 获得某个人的任务别表
-	public List<Task> getTasks(String assignee) {
+	public List<org.flowable.task.api.Task> getTasks(String assignee) {
 		return taskService.createTaskQuery().taskCandidateUser(assignee).list();
 	}
 

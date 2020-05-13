@@ -1,4 +1,4 @@
-package cn.segema.cloud.discovery.eureka;
+package cn.segema.cloud.discovery;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -9,8 +9,8 @@ import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
  */
 @SpringBootApplication
 @EnableEurekaServer
-public class EurekaApplication {
+public class DiscoveryEurekaApplication {
   public static void main(String[] args) {
-    SpringApplication.run(EurekaApplication.class, args);
+    SpringApplication.run(DiscoveryEurekaApplication.class, args);
   }
 }
