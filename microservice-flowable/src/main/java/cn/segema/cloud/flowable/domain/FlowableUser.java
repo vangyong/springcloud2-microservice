@@ -10,28 +10,22 @@ import javax.persistence.Table;
 import lombok.Data;
 
 @Data
-@Table(name = "FLOWABLE_USER")
+@Table(name = "flowable_user")
 @Entity
 public class FlowableUser {
 	@Id
-	@Column(name = "USERID")
+	@Column(name = "user_id")
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Integer userId;
 	
-	@Column(name = "USERNAME")
+	@Column(name = "user_name")
 	private String userName;
 	
-	@Column(name = "NICKNAME")
-	private String nickName;
-	
-	@Column(name = "PASSWORD")
+	@Column(name = "password")
 	private String password;
 	
-	@Column(name = "MOBILENUMBER")
+	@Column(name = "mobile_number")
 	private String mobileNumber;
 	
-	@Column(name = "CREDENTIALSSALT")
-	private String credentialsSalt;
-
 
 }

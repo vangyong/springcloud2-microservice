@@ -3,7 +3,7 @@ server:
 
 eureka:
   instance:
-    hostname: discovery         # 指定该Eureka实例的主机名
+    hostname: localhost         # 指定该Eureka实例的主机名
   client: 
     registerWithEureka: false
     fetchRegistry: false

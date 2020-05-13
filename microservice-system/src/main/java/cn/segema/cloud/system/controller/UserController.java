@@ -12,7 +12,6 @@ import org.springframework.data.domain.Sort;
 import org.springframework.data.domain.Sort.Direction;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -24,7 +23,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import cn.segema.cloud.system.domain.User;
 import cn.segema.cloud.system.repository.UserRepository;
-import cn.segema.cloud.system.vo.UserPersonalVO;
 
 @RestController
 @RequestMapping(value = "/user")
@@ -39,7 +37,10 @@ public class UserController {
 	@GetMapping("/{userId}")
 	public ResponseEntity findById(@PathVariable String userId) {
 		Optional<User> findOne = this.userRepository.findById(userId);
-		return new ResponseEntity(findOne.get(),HttpStatus.OK);
+		if(findOne.isPresent()) {
+			return new ResponseEntity(findOne.get(),HttpStatus.OK);
+		}
+		return new ResponseEntity(null,HttpStatus.OK);
 	}
 
 	@GetMapping("/list")
@@ -72,8 +73,8 @@ public class UserController {
 	}
 
 	@GetMapping("/listUserPersonalByUserName/{userName}")
-	public ResponseEntity listUserPersonalByUserName(@PathVariable String userName) {
-		List<UserPersonalVO> userList = userRepository.findUserPersonalByUserName(userName);
+	public ResponseEntity listByUserName(@PathVariable String userName) {
+		List<User> userList = userRepository.findByUserName(userName);
 		return new ResponseEntity(userList,HttpStatus.OK);
 	}
 

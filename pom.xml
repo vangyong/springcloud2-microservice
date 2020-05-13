@@ -19,7 +19,7 @@
 		<module>microservice-system</module>
 		<module>microservice-system-web</module>
 		<module>microservice-flowable</module>
-
+		<module>microservice-flowable-designer</module>
 
 	</modules>
 

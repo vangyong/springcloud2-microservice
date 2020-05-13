@@ -1,8 +1,8 @@
 server:
-  port: 12008
+  port: 12009
 spring:
   application: 
-    name: microservice-flowable    # 项目名称尽量用小写
+    name: microservice-flowable-designer    # 项目名称尽量用小写
   jpa:
     database: MYSQL
     generate-ddl: false
