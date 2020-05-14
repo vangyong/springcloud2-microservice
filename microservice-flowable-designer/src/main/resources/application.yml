@@ -1,39 +1,28 @@
 server:
   port: 12009
+  servlet:
+    context-path: /
 spring:
-  application: 
-    name: microservice-flowable-designer    # 项目名称尽量用小写
+  application:
+    name: microservice-flowable-designer
   jpa:
     database: MYSQL
     generate-ddl: false
     show-sql: true
     hibernate:
       ddl-auto: update
-    properties: 
-      hibernate: 
-        dialect : org.hibernate.dialect.MySQL5Dialect
-  datasource:                           # 指定数据源
-    url: jdbc:mysql://127.0.0.1:3306/springcloud2-microservice
-    driverClassName: com.mysql.jdbc.Driver
-    username: root  
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/springcloud2-microservice?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&useSSL=false&zeroDateTimeBehavior=convertToNull&serverTimezone=UTC
+    driverClassName: com.mysql.cj.jdbc.Driver
+    username: root
     password: root
-    
-#  admin: 
-#      email: admin
-#      password: admin
-#      firstname: Test
-#      lastname: Administrator
-      
-#flowable: 
-#  check-process-definitions: false
-    
-#  thymeleaf:
-#        cache: false
-#    #    prefix: classpath:/templates/
-#    #    suffix: .html
-#    #    mode: HTML5
-#    #    encoding: UTF-8
-#    #    content-type: text/html
+  mvc:
+    static-path-pattern: /**
+  resources:
+    static-locations: classpath:/META_INF/resources/,classpath:/resources/,classpath:/static/,classpath:/public/,classpath:/static/flowable-modeler
 logging:
   level:
     root: INFO
@@ -41,9 +30,16 @@ logging:
     org.hibernate.type.descriptor.sql.BasicBinder: TRACE
     org.hibernate.type.descriptor.sql.BasicExtractor: TRACE
     com.itmuch.youran.persistence: ERROR
+flowable:
+  common:
+    app:
+      idm-url: /flowable-idm
+  async-executor-activate: false
+  database-schema-update: false
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8761/eureka/    # 指定注册中心的地址
+      defaultZone: http://localhost:8761/eureka/
   instance:
     preferIpAddress: true
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${server.port}}
