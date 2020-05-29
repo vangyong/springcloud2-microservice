@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import cn.segema.cloud.demo.domain.User;
+import cn.segema.cloud.demo.domain.DemoUser;
 import cn.segema.cloud.demo.vo.UserVO;
 
 @RestController
@@ -34,7 +34,7 @@ public class TestController {
  
   
   @GetMapping("/redis")
-	public List<UserVO> redis(User user, Model model) {
+	public List<UserVO> redis(DemoUser user, Model model) {
 	  	UserVO user1 = new UserVO();
 	  	user1.setUserId("1");
 	  	user1.setUserName("a1");

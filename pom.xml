@@ -12,6 +12,7 @@
 	<modules>
 		<module>microservice-config</module>
 		<module>microservice-demo-mybatis</module>
+		<module>microservice-devtool</module>
 		<module>microservice-discovery</module>
 		<module>microservice-filecenter</module>
 		<module>microservice-gateway</module>

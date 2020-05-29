@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import cn.segema.cloud.demo.common.Pager;
-import cn.segema.cloud.demo.domain.User;
+import cn.segema.cloud.demo.domain.DemoUser;
 import cn.segema.cloud.demo.repository.UserRepository;
 import cn.segema.cloud.demo.vo.UserPersonalVO;
 
@@ -37,19 +37,19 @@ public class UserController {
 	 * @return user信息
 	 */
 	@GetMapping("/{userId}")
-	public User findById(@PathVariable String userId) {
-		Optional<User> findOne = this.userRepository.findById(userId);
+	public DemoUser findById(@PathVariable String userId) {
+		Optional<DemoUser> findOne = this.userRepository.findById(userId);
 		return findOne.get();
 	}
 
 	@GetMapping("/list")
-	public List<User> list(User user, Model model) {
-		List<User> userList = userRepository.findAll();
+	public List<DemoUser> list(DemoUser user, Model model) {
+		List<DemoUser> userList = userRepository.findAll();
 		return userList;
 	}
 
 	@PostMapping("/add")
-	public User add(User user, Model model) {
+	public DemoUser add(DemoUser user, Model model) {
 		if (user.getUserId() == null || "".equals(user.getUserId())) {
 			user.setUserId(UUID.randomUUID().toString());
 		}
@@ -58,7 +58,7 @@ public class UserController {
 	}
 
 	@RequestMapping(value = "edit")
-	public User edit(User user, Model model) {
+	public DemoUser edit(DemoUser user, Model model) {
 		// Role oldRole = roleRepository.getOne(role.getRoleId());
 		// BeanUtils.copyProperties(role, oldRole);
 		userRepository.save(user);
@@ -66,7 +66,7 @@ public class UserController {
 	}
 
 	@RequestMapping(value = "delete")
-	public User delete(User user) {
+	public DemoUser delete(DemoUser user) {
 		userRepository.delete(user);
 		return user;
 	}
@@ -84,11 +84,11 @@ public class UserController {
 //		return userRepository.findAll(pageable);
 //	}
 	@GetMapping("/listByPage")
-	public Pager<User> listByPage() {
+	public Pager<DemoUser> listByPage() {
 		Sort sort = Sort.by(Direction.DESC, "userId");
 		Pageable pageable = PageRequest.of(0, 30, sort);
-		Page<User> page = userRepository.findAll(pageable);
-		Pager<User> pager = new Pager<User>();
+		Page<DemoUser> page = userRepository.findAll(pageable);
+		Pager<DemoUser> pager = new Pager<DemoUser>();
 		pager.setCode("0");
 		pager.setMsg("success");
 		pager.setCount(page.getTotalElements());

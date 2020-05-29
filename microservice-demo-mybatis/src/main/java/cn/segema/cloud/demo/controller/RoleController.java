@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import cn.segema.cloud.demo.domain.Role;
+import cn.segema.cloud.demo.domain.DemoRole;
 import cn.segema.cloud.demo.repository.RoleRepository;
 
 /**
@@ -34,19 +34,19 @@ public class RoleController {
 	 * @return Role信息
 	 */
 	@GetMapping("/{id}")
-	public Role findById(@PathVariable String id) {
-		Optional<Role> findOne = this.roleRepository.findById(id);
+	public DemoRole findById(@PathVariable String id) {
+		Optional<DemoRole> findOne = this.roleRepository.findById(id);
 		return findOne.get();
 	}
 
 	@GetMapping("/list")
-	public List<Role> list(Role role, Model model) {
-		List<Role> list = roleRepository.findAll();
+	public List<DemoRole> list(DemoRole role, Model model) {
+		List<DemoRole> list = roleRepository.findAll();
 		return list;
 	}
 
 	@PostMapping("/add")
-	public Role add(Role role, Model model) {
+	public DemoRole add(DemoRole role, Model model) {
 		if (role.getRoleId() == null || "".equals(role.getRoleId())) {
 			role.setRoleId(UUID.randomUUID().toString());
 		}
@@ -55,7 +55,7 @@ public class RoleController {
 	}
 
 	@RequestMapping(value = "edit")
-	public Role edit(Role role, Model model) {
+	public DemoRole edit(DemoRole role, Model model) {
 		Long a = 2L;
 
 		roleRepository.save(role);
@@ -63,7 +63,7 @@ public class RoleController {
 	}
 
 	@RequestMapping(value = "delete")
-	public Role delete(Role role) {
+	public DemoRole delete(DemoRole role) {
 		roleRepository.delete(role);
 		return role;
 	}

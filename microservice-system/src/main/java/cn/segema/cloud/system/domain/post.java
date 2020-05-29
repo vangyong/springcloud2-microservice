@@ -1,74 +1,47 @@
 package cn.segema.cloud.system.domain;
 
+import java.math.BigInteger;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+
+import io.swagger.annotations.ApiModelProperty;
+import lombok.Data;
 
 /**
  * 岗位
  * @author wangyong
  *
  */
-@Table(name = "SYS_POST")
+@Table(name = "sys_post")
 @Entity
+@Data
 public class post {
 	@Id
-	@Column(name = "POSTID")
+	@Column(name = "post_id")
 	private String postId;
 	
-	@Column(name = "POSTNAME")
+	@Column(name = "postname")
 	private String postName;
 	
-	@Column(name = "POSTCODE")
-	private String systemCode;
+	@Column(name = "post_code")
+	private String postCode;
 	
-	@Column(name = "DESCRIPTION")
+	@ApiModelProperty(value = "创建时间")
+	@Column(name = "create_time")
+	private BigInteger createTime;
+	
+	@Column(name = "description")
 	private String description;
 	
-	@Column(name = "DELETESTATUS")
-	private Integer deletestatus;
+	@Column(name = "delete_status")
+	private Integer deleteStatus;
+	
+	@ApiModelProperty(value = "租户id")
+	@Column(name = "tenant_id")
+	private String tenantId;
 
-	public String getPostId() {
-		return postId;
-	}
-
-	public void setPostId(String postId) {
-		this.postId = postId;
-	}
-
-	public String getPostName() {
-		return postName;
-	}
-
-	public void setPostName(String postName) {
-		this.postName = postName;
-	}
-
-	public String getSystemCode() {
-		return systemCode;
-	}
-
-	public void setSystemCode(String systemCode) {
-		this.systemCode = systemCode;
-	}
-
-	public String getDescription() {
-		return description;
-	}
-
-	public void setDescription(String description) {
-		this.description = description;
-	}
-
-	public Integer getDeletestatus() {
-		return deletestatus;
-	}
-
-	public void setDeletestatus(Integer deletestatus) {
-		this.deletestatus = deletestatus;
-	}
-
+	
 }

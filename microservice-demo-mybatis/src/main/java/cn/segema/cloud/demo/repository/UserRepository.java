@@ -6,11 +6,11 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
-import cn.segema.cloud.demo.domain.User;
+import cn.segema.cloud.demo.domain.DemoUser;
 import cn.segema.cloud.demo.vo.UserPersonalVO;
 
 @Repository
-public interface UserRepository extends JpaRepository<User, String> {
+public interface UserRepository extends JpaRepository<DemoUser, String> {
 	
 	 //@Select("SELECT CONTRACTID,CONTTRRACTNAME,TOTALMONEY  FROM spring_cloud_study.contract WHERE contractid=#{0};") 
 	 //public  Map<String, Object> getTableData(int pageNum, int pageSize, String username);
@@ -22,5 +22,5 @@ public interface UserRepository extends JpaRepository<User, String> {
 	 public List<UserPersonalVO> findUserPersonalByUserName(String userName); 
 	 
 	 @Query("SELECT u from User u  where u.userName = ?1 ") 
-	 public List<User> findByUserName(String userName); 
+	 public List<DemoUser> findByUserName(String userName); 
 }
