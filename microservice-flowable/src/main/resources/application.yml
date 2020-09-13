@@ -13,7 +13,7 @@ spring:
       hibernate: 
         dialect : org.hibernate.dialect.MySQL5Dialect
   datasource:                           # 指定数据源
-    url: jdbc:mysql://127.0.0.1:3306/springcloud2-microservice
+    url: jdbc:mysql://127.0.0.1:3306/flowable
     driverClassName: com.mysql.jdbc.Driver
     username: root  
     password: root

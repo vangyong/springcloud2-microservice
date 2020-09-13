@@ -17,3 +17,6 @@ http://127.0.0.1:8080/flowable-rest/docs
 http://127.0.0.1:8080/flowable-rest/service/repository/deployments
 
 http://127.0.0.1:8080/flowable-rest/service/repository/process-definitions
+
+引用
+https://blog.csdn.net/puhaiyang/article/details/79845248
