@@ -4,7 +4,7 @@
 # @Author: wangyong
 # @Version: 1.0.0
 # @File: microservice-maintain.py
-# @desc: 运维服务
+# @Desc: 运维服务
 
 from flask import Flask, abort, request, jsonify
 import py_eureka_client.eureka_client as eureka_client
