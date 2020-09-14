@@ -7,17 +7,23 @@ import (
 	"github.com/gin-gonic/gin"
 	"microservice-equity/model"
 	"net/http"
+	"reflect"
 )
 
 func GetUser(c *gin.Context) {
 	userId := c.Param("id")
 	users := &model.User{}
-	us, _ := users.GetUser(userId)
-
-	fmt.Print(us.userName)
+	user, _ := users.GetUser(userId)
+	fmt.Println("-------user---")
+	fmt.Println(user)
+	fmt.Println(reflect.TypeOf(user) )
+	fmt.Println("----------")
 	c.JSON(http.StatusOK, gin.H{
 		"message": "success",
-		"user":    us,
+		"user":    user,
+		"userId":    user.UserId,
+		"nickName":   user.NickName,
+		"mobileNumber": user.MobileNumber,
 	})
 	c.Next()
 

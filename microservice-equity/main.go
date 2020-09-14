@@ -37,7 +37,17 @@ func LimitHandler(lmt *limiter.Limiter) gin.HandlerFunc {
 	}
 }
 
+//func enableEureka() {
+//	eeureka.RegisterAt(
+//		beego.AppConfig.DefaultString("eurekaServer", "http://localhost:8761"),
+//		beego.AppConfig.DefaultString("appname", "microservice-equity"),
+//		beego.AppConfig.DefaultString("httpport", "8060"))
+//}
+
 func main() {
+
+	//enableEureka()
+
 	gin.SetMode(gin.ReleaseMode)
 	router := gin.Default()
 	//// 静态资源加载，本例为css,js以及资源图片
@@ -75,7 +85,7 @@ func main() {
 		// v1.Use(Cors())
 
 		// 单个中间件的用法
-		v1.GET("/user/:id",Cors(), api.GetUser)
+		v1.GET("/user/:id", Cors(), api.GetUser)
 
 		// rate-limit
 		//v1.GET("/user/:id/*action", LimitHandler(lmt), api.GetUser)
@@ -87,6 +97,5 @@ func main() {
 	}
 
 	router.Run(":8060")
-
 
 }

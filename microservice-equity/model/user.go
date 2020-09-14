@@ -9,9 +9,9 @@ import (
 )
 
 type User struct {
-	userId       string `json:"userId" form:"userId"`
-	nickName     string `json:"nickName" form:"nickName"`
-	mobileNumber string `json:"mobileNumber" form:"mobileNumber"`
+	UserId       string `json:"userId" form:"userId"`
+	NickName     string `json:"nickName" form:"nickName"`
+	MobileNumber string `json:"mobileNumber" form:"mobileNumber"`
 }
 
 func (u *User) GetUser(id string) (user User, err error) {
@@ -62,7 +62,7 @@ func (u *User) GetUser(id string) (user User, err error) {
 	fmt.Println(nickName, mobileNumber)
 	fmt.Println("----------")
 
-	users = User{userId: userId, nickName: nickName.String, mobileNumber: mobileNumber.String}
+	users = User{UserId: userId, NickName: nickName.String, MobileNumber: mobileNumber.String}
 
 	return users, nil
 
